@@ -25,6 +25,8 @@ docker-compose up
 ```
 [DEMO HERE]
 
+cplab_command    - Will show alias command useful for this demo
+
 cplab_trg http://juiceshop.local     # Use to generate good traffic 
                                    - This just does a simple crawl of the Juiceshop website
 
