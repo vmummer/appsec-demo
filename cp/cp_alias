@@ -1,1 +1,18 @@
 
+export TOKEN=cp-xx (replace with your token)
+DOCKER_HOST="`hostname -I| awk ' {print $1}'`"
+alias cplab_trb='docker run -it --rm -v $(pwd)/data:/home/web-scraper/data --add-host juiceshop.local:$DOCKER_HOST appse
+c-demo_test-host python /home/juice-shop-solver/solutions.py'
+alias cplab_trg='docker run -it --rm -v $(pwd)/data:/home/web-scraper/data --add-host juiceshop.local:$DOCKER_HOST appse
+c-demo_test-host python /home/web-scraper/websitescrap.py'
+alias cplab_cpnano='docker exec -it cp-appsec-agent-container /usr/sbin/cpnano -s'
+alias cplab_wipe='docker-compose down &&  docker system prune -a'
+alias cplab_cert='sh ~/appsec-demo/cp/cp_get_cert.sh'
+alias cplab_fetch='git  config --global http.sslverify false && git clone https://github.com/vmummer/appsec-demo.git'
+alias cplab_command='printf "Check Point Lab Commands:\n
+cplab_cpano  Show status of AppSec Agent
+cplab_cert   Fetch Cert required to load docker images
+cplab_trb    Juiceshop Bad  Traffic Generator
+cplab_trg    Juiceshop Good Traffic Generator
+cplab_wipe   Wipeout all Docker containers and required to pull new images
+cplab_fetch  Fetches Clone from GitHub Lab Files appsec-demo.git
