@@ -1,15 +1,14 @@
-FROM ubuntu
+FROM python:3.8-slim
 MAINTAINER Vince Mammoliti vincem@checkpoint.com
-RUN apt-get update
-RUN apt-get upgrade -y git python3-minimal python3-pip
-RUN pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org  beautifulsoup4 certifi chardet idn
-a lxml psutil redis redislite requests soupsieve urllib3
-RUN pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org  zmq selenium
-RUN pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org hashids
-RUN apt-get install apt-transport-https ca-certificates -y
-RUN update-ca-certificates
-RUN export GIT_SSL_NO_VERIFY=true
-RUN git config --global http.sslVerify false
-RUN git clone https://github.com/vmummer/web-scraper.git /home/web-scraper
-RUN git clone https://github.com/vmummer/juice-shop-solver.git /home/juice-shop-solver
-RUN ls -la /home/web-scraper/* && ls -la /home/juice-shop-solver
+# Sept 14, 2022
+RUN apt-get update && apt-get upgrade -y && apt-get install apt-transport-https ca-certificates -y
+#RUN apt-get upgrade -y git
+RUN pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org  beautifulsoup4 certifi chardet i
+dna lxml psutil redis redislite requests soupsieve urllib3  zmq selenium hashids
+#RUN apt-get install apt-transport-https ca-certificates -y
+RUN update-ca-certificates  &&  export GIT_SSL_NO_VERIFY=true && git config --global http.sslVerify false
+#RUN export GIT_SSL_NO_VERIFY=true
+#RUN git config --global http.sslVerify false
+RUN git clone https://github.com/vmummer/web-scraper.git /home/web-scraper &&  git clone https://github.com/vmummer/juice-shop-solver.git /home/juice-shop-solver
+#RUN git clone https://github.com/vmummer/juice-shop-solver.git /home/juice-shop-solver
+#RUN ls -la /home/web-scraper/* && ls -la /home/juice-shop-solver
