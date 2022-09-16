@@ -1,7 +1,8 @@
 # Check Point CloudGuard AppSec demo using Win10/11 WSL and Docker
  
  This is a simple docker-compose environment for deploy a Check Point AppSec embedded nano-agent demo on Windows WSL and Docker.  
- It will deploy three containers, an NGINX reverse proxy, an agent-container (the nano-agent) and the OWASP JuiceShop app.  
+ It will deploy four containers, an NGINX reverse proxy, an agent-container (the nano-agent), tester host with traffic generators and the OWASP JuiceShop app.
+ This was based off of Stuart Green's work
 
 You will have two ways to access the stack:  
 * Port 80: Protected by AppSec  
