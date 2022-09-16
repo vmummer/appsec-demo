@@ -4,7 +4,8 @@ upstream juiceshop_host {
 }
 server {
   server_name ${NGINX_SERVER_FQDN};
-  listen 80;
+  # listen 80;
+  listen 80 default_server;
   location / {
     proxy_pass http://juiceshop_host/;
   }
@@ -20,8 +21,8 @@ server {
 }
 
 
-server {
-  listen 80 default_server;
-  server_name _;
-  return 404;
-}
+#server {
+#  listen 80 default_server;
+#  server_name _;
+#  return 404;
+#}
