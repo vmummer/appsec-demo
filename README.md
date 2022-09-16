@@ -25,10 +25,10 @@ docker-compose up
 ```
 [DEMO HERE]
 
-cplab_trg http://juiceshop.local   Use to generate good traffic 
+cplab_trg http://juiceshop.local     # Use to generate good traffic 
                                    - This just does a simple crawl of the Juiceshop website
 
-cplab_trb http://juiceshop.local   Use to generate questionable traffic on the Juiceshop website
+cplab_trb http://juiceshop.local     # Use to generate questionable traffic on the Juiceshop website
 
 ```
 docker-compose down
