@@ -40,4 +40,12 @@ services:
       - nginx-reverse-proxy
     command: ["/cp-nano-agent", "--token", "$TOKEN"]
 
-
+  test-host:
+    container_name: cp-appsec-tester
+    stdin_open: true
+    tty: true
+    build:
+       dockerfile: Dockerfile
+       context: ./tester
+     volumes:
+      - ./tester/data:/home/web-scraper/data
