@@ -19,19 +19,19 @@ Edit cp/cp_alias file and changed the following (nano/vi cp/cp_alias):
 Save file
 
 source cp/cp_alias    << Will load in TOKEN variable and also cplab alias commands 
-cplab_cert            << WSL does not provide CA certs - this fetches the required to build the Docker Images.
+cp_cert               << WSL does not provide CA certs - this fetches the required to build the Docker Images.
 docker-compose down -v --remove-orphans
 docker-compose build
 docker-compose up
 ```
 [DEMO HERE]
 
-cplab_help     - Will show alias command useful for this demo
+cp_help     - Will show alias command useful for this demo
 
-cplab_trg http://juiceshop.local     # Use to generate good traffic 
+cp_trg http://juiceshop.local     # Use to generate good traffic 
                                    - This just does a simple crawl of the Juiceshop website
 
-cplab_trb http://juiceshop.local     # Use to generate questionable traffic on the Juiceshop website
+cp_trb http://juiceshop.local     # Use to generate questionable traffic on the Juiceshop website
 
 ```
 docker-compose down
