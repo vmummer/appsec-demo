@@ -47,5 +47,5 @@ services:
     build:
        dockerfile: Dockerfile
        context: ./tester
-     volumes:
+    volumes:
       - ./tester/data:/home/web-scraper/data
