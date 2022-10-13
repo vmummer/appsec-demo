@@ -18,3 +18,4 @@ cp_wipe       Wipeout all Docker containers and required to pull new images
 cp_fetch      Fetches Clone from GitHub Lab Files appsec-demo.git
 cp_host       Shows the IP address of the Docker Host used
 cp_help       Alias Command to help with Check Point Lab
+"'
