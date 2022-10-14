@@ -1,4 +1,4 @@
-export TOKEN=cp-xx (replace with your token)
+export TOKEN=cp-us-e4d7e1ca-c542-4b98-ae6e-ebb4e80d3bf3d1909eb0-de4c-4326-b44c-fe1028995780
 DOCKER_HOST="`hostname -I| awk ' {print $1}'`"
 alias cp_tr_bad='docker run -it --rm -v $(pwd)/data:/home/web-scraper/data --add-host juiceshop.local:$DOCKER_HOST -w /home/juice-shop-solver appsec-demo_test-host python main.py'
 alias cp_tr_good='docker run -it --rm -v $(pwd)/data:/home/web-scraper/data --add-host juiceshop.local:$DOCKER_HOST appsec-demo_test-host python /home/web-scraper/websitescrap.py'
@@ -18,3 +18,4 @@ cp_wipe       Wipeout all Docker containers and required to pull new images
 cp_fetch      Fetches Clone from GitHub Lab Files appsec-demo.git
 cp_host       Shows the IP address of the Docker Host used
 cp_help       Alias Command to help with Check Point Lab
+"'

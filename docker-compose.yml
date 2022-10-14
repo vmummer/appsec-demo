@@ -35,7 +35,7 @@ services:
     #build:
     #  dockerfile: Dockerfile
     #context: ./agent-container
-    image: checkpoint/infinity-next-nano-agent    
+    image: checkpoint/infinity-next-nano-agent:412743    
     depends_on:
       - nginx-reverse-proxy
     command: ["/cp-nano-agent", "--token", "$TOKEN"]
