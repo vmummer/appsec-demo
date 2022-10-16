@@ -4,10 +4,8 @@ echo "Adding Check Point AppSec Lab Alias Commands.  Use cp_help for list of com
 chmod +x cp/*.sh
 export TOKEN=
 DOCKER_HOST="`hostname -I| awk ' {print $1}'`"
-alias cp_tr_bad='docker run -it --rm -v $(pwd)/data:/home/web-scraper/data --add-host juiceshop.local:$DOCKER_HOST -w /home/juice-shop-
-solver appsec-demo_test-host python main.py'
-alias cp_tr_good='docker run -it --rm -v $(pwd)/data:/home/web-scraper/data --add-host juiceshop.local:$DOCKER_HOST appsec-demo_test-ho
-st python /home/web-scraper/websitescrap.py'
+alias cp_tr_bad='docker run -it --rm -v $(pwd)/data:/home/web-scraper/data --add-host juiceshop.local:$DOCKER_HOST -w /home/juice-shop-solver appsec-demo_test-host python main.py'
+alias cp_tr_good='docker run -it --rm -v $(pwd)/data:/home/web-scraper/data --add-host juiceshop.local:$DOCKER_HOST appsec-demo_test-host python /home/web-scraper/websitescrap.py'
 alias cp_cpnano='docker exec -it cp-appsec-agent-container /usr/sbin/cpnano'
 alias cp_uninstall='docker exec -it cp-appsec-agent-container /usr/sbin/cpnano --uninstall'
 alias cp_token='docker exec -it cp-appsec-agent-container ./cp-nano-agent --token' $TOKEN
