@@ -1,4 +1,4 @@
-export TOKEN=<replace>
+export TOKEN=
 DOCKER_HOST="`hostname -I| awk ' {print $1}'`"
 alias cp_tr_bad='docker run -it --rm -v $(pwd)/data:/home/web-scraper/data --add-host juiceshop.local:$DOCKER_HOST -w /home/juice-shop-solver appsec-demo_test-host python main.py'
 alias cp_tr_good='docker run -it --rm -v $(pwd)/data:/home/web-scraper/data --add-host juiceshop.local:$DOCKER_HOST appsec-demo_test-host python /home/web-scraper/websitescrap.py'

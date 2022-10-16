@@ -35,10 +35,12 @@ services:
     #build:
     #  dockerfile: Dockerfile
     #context: ./agent-container
-    image: checkpoint/infinity-next-nano-agent:412743    
+    #image: checkpoint/infinity-next-nano-agent:412743    
+    image: checkpoint/infinity-next-nano-agent
     depends_on:
       - nginx-reverse-proxy
     command: ["/cp-nano-agent", "--token", "$TOKEN"]
+    hostname: appsec-lab
 
   test-host:
     container_name: cp-appsec-tester
@@ -49,3 +51,4 @@ services:
        context: ./tester
     volumes:
       - ./tester/data:/home/web-scraper/data
+    hostname: tester
