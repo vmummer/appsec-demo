@@ -14,11 +14,11 @@ You will have two ways to access the Juice Store Web Site:
 * Clone the repository
 * From a machine with docker and docker-compose installed, run:  
 ```
-Edit cp/cp_alias file and changed the following (nano/vi cp/cp_alias):
+Edit cpalias.sh file and changed the following (nano/vi cp/cp_alias):
  export TOKEN=<your agent token>
 Save file
 
-source cp/cp_alias    << Will load in TOKEN variable and also cplab alias commands 
+source cpalias.sh    << Will load in TOKEN variable and also cplab alias commands 
 cp_cert               << WSL does not provide CA certs - this fetches the required to build the Docker Images.
 docker-compose down -v --remove-orphans
 docker-compose build
@@ -28,10 +28,10 @@ docker-compose up
 
 cp_help     - Will show alias command useful for this demo
 
-cp_trg http://juiceshop.local     # Use to generate good traffic 
-                                   - This just does a simple crawl of the Juiceshop website
+cp_tr_good http://juiceshop.local:80     # Use to generate good traffic 
+                                         - This just does a simple crawl of the Juiceshop website
 
-cp_trb http://juiceshop.local     # Use to generate questionable traffic on the Juiceshop website
+cp_tr_bad http://juiceshop.local:80      # Use to generate questionable traffic on the Juiceshop website
 
 ```
 docker-compose down
