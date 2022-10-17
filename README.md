@@ -14,7 +14,7 @@ You will have two ways to access the Juice Store Web Site:
 * Clone the repository
 * From a machine with docker and docker-compose installed, run:  
 ```
-Edit cpalias.sh file and changed the following (nano/vi cp/cp_alias):
+Edit cpalias.sh file and added AppSec Token.  NOT Required, but will have to enter manually for every session.
  export TOKEN=<your agent token>
 Save file
 
