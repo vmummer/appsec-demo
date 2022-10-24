@@ -7,6 +7,7 @@ if [ -z "$1" ]; then
         echo "Usage  cp_token         - Display curent TOKEN value" 
 	echo "       cp_token <TOKEN> - Set TOKEN Variable - <Check Point AppSec TOKEN copied from Infinity AppSEC portal>"
         echo ""
+	source .env
         if [[ $TOKEN ]]; then
 	       echo -e "TOKEN variable is set to: $TOKEN \n"
 	       exit 1
@@ -17,6 +18,6 @@ if [ -z "$1" ]; then
 else
         sed -i 's/TOKEN=.*/TOKEN='$1'/' .env 
         export TOKEN=$1
-        echo -e "TOKEN varable is changed to: \n $TOKEN in .env file."
-	echo -E "Important reload the file via issuing the following command: \n source .env \n for variable to be set. "
+        echo -e "TOKEN varable is changed to: $TOKEN in .env file."
+#	echo -e "Important reload the file via issuing the following command: \n source .env \n for variable to be set. "
 fi
