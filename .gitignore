@@ -1,4 +1,6 @@
 agent-container/conf/*
 agent-container/data/*
 agent-container/logs/*
-tidy.sh
+data/*
+.env
+snort.txt
