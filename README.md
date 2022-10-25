@@ -14,12 +14,10 @@ You will have two ways to access the Juice Store Web Site:
 * Clone the repository
 * From a machine with docker and docker-compose installed, run:  
 ```
-Edit cpalias.sh file and added AppSec Token.  NOT Required, but will have to enter manually for every session.
- export TOKEN=<your agent token>
-Save file
+source cpalias.sh    << Load Aliase commands
+cptoken              << Token from Check Point Infinity Portal - AppSec>
 
-source cpalias.sh    << Will load in TOKEN variable and also cplab alias commands 
-cpcert               << WSL does not provide CA certs - this fetches the required to build the Docker Images.
+cpcert               << WSL does not provide CA certs - tis fetches the required to build the Docker Images.
 docker-compose down -v --remove-orphans
 docker-compose build
 docker-compose up
