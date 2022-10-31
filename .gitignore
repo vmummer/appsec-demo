@@ -3,4 +3,8 @@ agent-container/data/*
 agent-container/logs/*
 data/*
 .env
+<<<<<<< HEAD
 snort.txt
+=======
+.snort.txt
+>>>>>>> 31f0057d74d0af1daf812410cbf31afb96d38b25
