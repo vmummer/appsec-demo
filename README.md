@@ -20,7 +20,8 @@ cptoken  cp-us-....token   << Token from Check Point Infinity Portal - AppSec>
 cpcert                     << WSL does not provide CA certs - fetches the required to build the Docker Images.
 docker-compose down -v --remove-orphans
 docker-compose build
-docker-compose up
+source .env
+docker-compose up -d
 ```
 [DEMO HERE]
 
